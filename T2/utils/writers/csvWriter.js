@@ -1,14 +1,15 @@
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 function write(site, data) {
-    const path = site.getName() + '.csv';
 
     const csvWriter = createCsvWriter({
-        path: path,
+        path: 'titles.csv',
         header: [
             {id: 'site', title: 'SITE'},
             {id: 'title', title: 'TITLE'}
-        ]
+        ],
+        alwaysQuote: true,
+        append: true
     });
 
     let records = [];
