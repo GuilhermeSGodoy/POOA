@@ -4,12 +4,10 @@ const SiteAbstract = require("./_SiteAbstract").SiteClass;
 const openSite = require("../utils/openSite").openSite;
 
 class Globo extends SiteAbstract {
-    constructor(url) {
-        super();
-        this.url = url;
+    constructor(url, name) {
+        super(url, name);
     }
 
-    // função específica para extrair títulos do globo.com
     async getTitles() {
         const siteData = await openSite(this.url);
         const $ = cheerio.load(siteData);
@@ -22,7 +20,7 @@ class Globo extends SiteAbstract {
             titles.push($(this).text());
         })
 
-        console.log(titles);
+        return titles;
     }
 }
 

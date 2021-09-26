@@ -4,7 +4,7 @@ const axios = require('axios');
 
 async function openSite(url) {
     try {
-        let res = await axios({baseURL: url, timeout: 20000});
+        let res = await axios({baseURL: url, timeout: 30000});
 
         if (res.status == 200) {
             return res.data;

@@ -4,9 +4,8 @@ const SiteAbstract = require("./_SiteAbstract").SiteClass;
 const openSite = require("../utils/openSite").openSite;
 
 class Estadao extends SiteAbstract {
-    constructor(url) {
-        super();
-        this.url = url;
+    constructor(url, name) {
+        super(url, name);
     }
 
     // função específica para extrair títulos do estadao.com.br
@@ -16,17 +15,23 @@ class Estadao extends SiteAbstract {
 
         let titles = [];
         
+        // filtra os elementos html que possuem a classe .title
         const htmlItems = $('.title');
 
         htmlItems.each(function() {
+            // filtro para pegar apenas as classes .title que possuem um atributo 'a' dentro;
+            // o motivo é que o site possui a classe .title em outros títulos que não são notícias
             const title = $(this).find("a").text();
             
             if (title) {
                 titles.push(title);
+            
+                // POSSIBILIDADE: adicionar um objeto com título e link da notícia
+                // this.titles.push({$(this).text(), $(this).attr("href")});
             }
         })
 
-        console.log(titles);
+        return titles;
     }
 }
 

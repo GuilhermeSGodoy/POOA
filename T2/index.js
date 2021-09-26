@@ -4,19 +4,18 @@ const Estadao = require("./sites/Estadao").Estadao;
 const Uol = require("./sites/Uol").Uol;
 
 // importa a função que escreve o output
-const writer = require("./utils/outputWriter").writer;
+const outputWriter = require("./utils/outputWriter").outputWriter;
 
 
-// cria objetos dos sites com suas URLs
-const globo = new Globo("https://globo.com/");
-const estadao = new Estadao("https://www.estadao.com.br/");
-const uol = new Uol("https://www.uol.com.br/");
+// define a lista de sites a ser percorrida
+let sites = [];
 
-// define a lista de sites
-const sites = [globo, estadao, uol];
+// adiciona objetos dos sites com suas URLs
+sites.push(new Globo("https://globo.com/", "Globo"));
+sites.push(new Estadao("https://www.estadao.com.br/", "Estadao"));
+sites.push(new Uol("https://www.uol.com.br/", "Uol"));
 
-// para cada site, escreve seu cabeçalho e suas notícias
-sites.forEach(async site => {
-    const titles = await site.getTitles();
-    writer(site.getUrl(), titles);
+// para cada site, passa o objeto para a função que o imprime
+sites.forEach(site => {
+    outputWriter(site);
 })
