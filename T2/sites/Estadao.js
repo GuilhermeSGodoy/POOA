@@ -4,8 +4,8 @@ const SiteAbstract = require("./_SiteAbstract").SiteClass;
 const openSite = require("../utils/openSite").openSite;
 
 class Estadao extends SiteAbstract {
-    constructor(url, name) {
-        super(url, name);
+    constructor(url) {
+        super(url);
     }
 
     // função específica para extrair títulos do estadao.com.br

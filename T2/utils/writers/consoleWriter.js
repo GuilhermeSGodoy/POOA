@@ -1,5 +1,5 @@
 function write(site, data) {
-    console.log(site.getName());
+    console.log(site.getUrl());
     console.log(data);
     console.log("------------------------------------------------\n\n");
 }

@@ -11,9 +11,9 @@ const outputWriter = require("./utils/outputWriter").outputWriter;
 let sites = [];
 
 // adiciona objetos dos sites com suas URLs
-sites.push(new Globo("https://globo.com/", "Globo"));
-sites.push(new Estadao("https://www.estadao.com.br/", "Estadao"));
-sites.push(new Uol("https://www.uol.com.br/", "Uol"));
+sites.push(new Globo("https://globo.com/"));
+sites.push(new Estadao("https://www.estadao.com.br/"));
+sites.push(new Uol("https://www.uol.com.br/"));
 
 // para cada site, passa o objeto para a função que o imprime
 sites.forEach(site => {

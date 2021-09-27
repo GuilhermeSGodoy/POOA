@@ -4,8 +4,8 @@ const SiteAbstract = require("./_SiteAbstract").SiteClass;
 const openSite = require("../utils/openSite").openSite;
 
 class Globo extends SiteAbstract {
-    constructor(url, name) {
-        super(url, name);
+    constructor(url) {
+        super(url);
     }
 
     async getTitles() {

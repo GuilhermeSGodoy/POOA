@@ -7,24 +7,16 @@ de forma que todos os sites criados possuam esse método.
 
 class SiteAbstract {
     // construtor que verifica se foi passada uma URL para o site
-    constructor(url, name) {
+    constructor(url) {
         this.url = url;
-        this.name = name;
         if (!this.url) {
             throw new Error("An URL must be provided when creating an SiteAbstract object!");
-
-            // POSSIBILIDADE: verificar se o formato da URL está correto
-        } else if (!this.name) {
-            throw new Error("An site name must be provided when creating an SiteAbstract object!");
         }
+            // POSSIBILIDADE: verificar se o formato da URL está correto
     }
 
     getUrl() {
         return this.url;
-    }
-
-    getName() {
-        return this.name;
     }
 
     // estratégia de busca que será implementada para cada site
