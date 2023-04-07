@@ -1,4 +1,4 @@
-# 1001521 - Programação Orientada a Objetos Avançada
+# T2 - Princípio Aberto-Fechado
 
 ## Autores
 
@@ -6,7 +6,6 @@
 |---------------------------|--------|---------|
 | Guilherme Santos de Godoy | 758710 | BCC 018 |
 | Igor Lúcio Manta Guedes   | 743185 | BCC 018 |
-| William Eugênio de Paiva  | 726601 | BCC 016 |
 
 ## Introdução
 
