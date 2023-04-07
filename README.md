@@ -1,4 +1,6 @@
-# 1001521 - Programação Orientada a Objetos Avançada
+# Programação Orientada a Objetos Avançada
+
+Os trabalhos da disciplina se baseiam na exploração dos princípio SOLID a partir das atividades propostas.
 
 ## Autores
 
