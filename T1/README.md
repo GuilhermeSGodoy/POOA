@@ -6,7 +6,6 @@
 |---------------------------|--------|---------|
 | Guilherme Santos de Godoy | 758710 | BCC 018 |
 | Igor Lúcio Manta Guedes   | 743185 | BCC 018 |
-| William Eugênio de Paiva  | 726601 | BCC 016 |
 
 ## 1.1. Conceito Básico
 
